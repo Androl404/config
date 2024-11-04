@@ -1,0 +1,18 @@
+[window]
+opacity = 1
+decorations = "Full"
+padding = {x=0, y=0}
+
+[font]
+normal.family = "Iosevka Nerd Font"
+normal.style = "Regular"
+bold.family = "Iosevka Nerd Font"
+bold.style = "Bold"
+italic.family = "Iosevka Nerd Font"
+italic.style = "Italic"
+bold_italic.family = "Iosevka Nerd Font"
+bold_italic.style = "BoldItalic"
+size = 15
+
+[env]
+TERM = "xterm-256color"
