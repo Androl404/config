@@ -117,7 +117,7 @@
             (interactive)
             (company-mode 0)))
 
-(rc/require 'treemacs 'php-mode 'typescript-mode 'magit 'rust-mode 'auto-complete-auctex 'flycheck 'eglot)
+(rc/require 'treemacs 'php-mode 'typescript-mode 'magit 'rust-mode 'auto-complete-auctex 'flycheck 'eglot 'lua-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -141,7 +141,7 @@
  '(ido-mode 'both nil (ido))
  '(ido-show-dot-for-dired nil)
  '(package-selected-packages
-   '(ac-php treemacs lsp-ltex company-math pabbrev auto-complete-auctex lsp-latex auctex smex rust-mode multiple-cursors magit typescript-mode undo-fu undo-tree evil company-box projectile ## phpt-mode flycheck lsp-mode php-mode gruber-darker-theme ido-completing-read+))
+   '(lua-mode ac-php treemacs lsp-ltex company-math pabbrev auto-complete-auctex lsp-latex auctex smex rust-mode multiple-cursors magit typescript-mode undo-fu undo-tree evil company-box projectile ## phpt-mode flycheck lsp-mode php-mode gruber-darker-theme ido-completing-read+))
  '(php-imenu-generic-expression 'php-imenu-generic-expression-simple)
  '(php-mode-coding-style 'psr2)
  '(php-mode-template-compatibility nil)
