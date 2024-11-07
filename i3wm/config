@@ -73,8 +73,11 @@ bindsym Mod1+l exec i3lock -c 54084e && sleep 1 && xset dpms force off
 # Key-binding to suspend (sleep) the computer
 bindsym Mod1+Shift+l exec i3lock -c 54084e && systemctl suspend
 
-# Key-binding to suspend (sleep) the computer
+# Key-binding to launch Boomer
 bindsym $mod+b exec boomer
+
+# Enable touchpad tap as click
+exec xinput set-prop "ELAN06FA:00 04F3:327E Touchpad" "libinput Tapping Enabled" 1
 
 # Bind Alt+Tab to switch between workspaces
 bindsym Mod1+Tab workspace next
