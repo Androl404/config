@@ -8,7 +8,7 @@
  '(column-number-mode t)
  '(custom-enabled-themes '(gruber-darker))
  '(custom-safe-themes
-   '("01a9797244146bbae39b18ef37e6f2ca5bebded90d9fe3a2f342a9e863aaa4fd" "e27c9668d7eddf75373fa6b07475ae2d6892185f07ebed037eedf783318761d7" "e13beeb34b932f309fb2c360a04a460821ca99fe58f69e65557d6c1b10ba18c7" default))
+   '("01a9797244146bbae39b18ef37e6f2ca5bebded90d9fe3a2f342a9e863aaa4fd" default))
  '(doc-view-continuous t)
  '(evil-want-C-u-scroll t)
  '(ido-auto-merge-delay-time 0.7)
