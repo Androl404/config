@@ -140,3 +140,4 @@
 
 ;; To laod the custom-file
 (load custom-file)
+(put 'upcase-region 'disabled nil)
