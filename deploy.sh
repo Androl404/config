@@ -30,6 +30,7 @@ ln -sf "$SCRIPT_DIR/kitty/kitty.conf" ~/.config/kitty/kitty.conf
 
 # For i3wm
 ln -sf "$SCRIPT_DIR/i3wm/config" ~/.config/i3/config
+ln -sf "$SCRIPT_DIR/i3wm/.i3status.conf" ~/ # .config/i3/config
 
 # For Emacs
 ln -sf "$SCRIPT_DIR/emacs/rc.el" ~/.emacs.d/rc.el
