@@ -69,10 +69,12 @@ exec --no-startup-id /home/andrei/Documents/i3-battery-popup/i3-battery-popup -L
 # exec --no-startup-id "xautolock -detectsleep -time 5 -locker \"i3lock -c 54084e && sleep 0.3 && xset dpms force off\""
 
 # Key-binding to lock the screen
-bindsym Mod1+l exec i3lock -c 54084e && sleep 1 && xset dpms force off
+# bindsym Mod1+l exec i3lock -c 54084e && sleep 1 && xset dpms force off
+bindsym Mod1+l exec xset dpms force off
 
 # Key-binding to suspend (sleep) the computer
-bindsym Mod1+Shift+l exec i3lock -c 54084e && systemctl suspend
+# bindsym Mod1+Shift+l exec i3lock -c 54084e && systemctl suspend
+bindsym Mod1+Shift+l exec systemctl suspend
 
 # Key-binding to launch Boomer
 bindsym $mod+b exec boomer
