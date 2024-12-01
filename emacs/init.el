@@ -100,11 +100,11 @@
 (rc/require 'auctex)
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
+(setq LaTeX-electric-left-right-brace t)
 (setq-default TeX-master nil)
 
 (add-hook 'LaTeX-mode-hook 'flysppell-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-(add-hook 'LaTeX-mode-hook 'pabbrev-mode)
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
