@@ -53,17 +53,8 @@
 ;; For dired if I have multiple dired windows to move/copy file with default path of the other buffer
 (setq dired-dwim-target t)
 
-;; For LSP (Is It Really Needed?)
-;; (rc/require 'lsp-mode)
-;; (use-package lsp-mode
-;;   :commands (lsp lsp-deferred)
-;;   :hook (lsp-mode . efs/lsp-mode-setup)
-;;   :init
-;;   (setq lsp-keymap-prefix "C-c l")  ;; Or 'C-l', 's-l'
-;;   :config
-;;   (lsp-enable-which-key-integration t))
-
 ;; To enable and use the 'evil-mode'
+; (rc/require 'evil)
 ; (require 'evil)
 ; (evil-mode 1)
 
@@ -103,7 +94,7 @@
 (setq LaTeX-electric-left-right-brace t)
 (setq-default TeX-master nil)
 
-(add-hook 'LaTeX-mode-hook 'flysppell-mode)
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 
