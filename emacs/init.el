@@ -105,10 +105,6 @@
 (rc/require 'company-math 'company-box)
 (require 'company)
 (global-company-mode)
-(add-hook 'tuareg-mode-hook
-          (lambda ()
-            (interactive)
-            (company-mode 0)))
 
 ;; To move Text
 (rc/require 'move-text)
