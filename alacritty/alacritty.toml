@@ -16,3 +16,8 @@ size = 15
 
 [env]
 TERM = "xterm-256color"
+
+[keyboard]
+bindings = [
+     { key = "+", mods = "Control|Shift", action = "IncreaseFontSize" },
+]
