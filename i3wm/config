@@ -38,7 +38,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -c 05006e
 exec --no-startup-id nm-applet
 
 # Start the Emacs daemon in the background at startup
-exec --no-startup-id emacs --dameon &
+exec --no-startup-id emacs --daemon &
 
 ##  Screenshots in files
 bindsym Ctrl+Print exec --no-startup-id maim --format=png "/home/$USER/Images/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
