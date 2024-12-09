@@ -37,6 +37,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -c 05006e
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Start the Emacs daemon in the background at startup
+exec --no-startup-id emacs --dameon &
+
 ##  Screenshots in files
 bindsym Ctrl+Print exec --no-startup-id maim --format=png "/home/$USER/Images/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/Images/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
@@ -107,12 +110,15 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec alacritty
 # bindsym $mod+Return exec i3-sensible-terminal
 
+# start an Emacs frame from the daemon
+bindsym $mod+Shift+Return exec emacsclient -c -a 'emacs' # The space at the end is important
+
 # kill focused window
 bindsym $mod+Shift+A kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show run -font "JetBrains Mono 15"
-bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -font "JetBrains Mono 15"
+bindsym $mod+d exec --no-startup-id rofi -show run -font "Iosevka Nerd Font 16"
+bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -font "Iosevka Nerd Font 16"
 # bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
