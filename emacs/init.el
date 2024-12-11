@@ -30,7 +30,8 @@
 (setq display-line-numbers-type 'relative) 
 
 ;; Set custom font
-(set-frame-font "Iosevka Nerd Font 18" nil t)
+(add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-18")) ; For compatibility wth emacsclient
+; (set-frame-font "Iosevka Nerd Font 18" nil t)
 
 ;; To set up the 'ido-completing-read+ package
 (rc/require 'smex 'ido-completing-read+)
