@@ -15,7 +15,7 @@
 (setq-default inhibit-splash-screen t               ;; Don't show the splash screen
     make-backup-files nil                           ;; To stop creating back-ups files
     tab-width 4                                     ;; To make tab width as 4 spaces
-    indent-tabs-mode nil                            ;; Tabs will indent the line instead of adding tabs
+    indent-tabs-mode nil                            ;; For using spaces instead of tabs
     compilation-scroll-output t)                    ;; Output in compilation mode scrolls as it appears
 
 ;; Turn off some unneeded UI elements
@@ -30,7 +30,7 @@
 (setq display-line-numbers-type 'relative) 
 
 ;; Set custom font
-(add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-18")) ; For compatibility wth emacsclient
+(add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-17")) ; For compatibility with emacsclient
 ; (set-frame-font "Iosevka Nerd Font 18" nil t)
 
 ;; To set up the 'ido-completing-read+ package
@@ -45,8 +45,12 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; To set indetation as 4 spaces for C (Is it really needed?)
-(setq c-default-style "linux"
-      c-basic-offset 4)
+(setq-default
+    ;; c-default-style "linux" ;; It prefers tabs over spaces
+    c-basic-offset 4)
+
+;; Use `//' comments instead if `/*' comments in c-mode
+(add-hook 'c-mode-hook (lambda () (c-toggle-comment-style -1)))
 
 ;; dired
 (require 'dired-x)
@@ -84,9 +88,6 @@
 
 ;; Key-binding to duplicate line
 (global-set-key (kbd "C-,") 'duplicate-line)
-
-;; Use `//' comments instead if `/*' comments in c-mode
-(add-hook 'c-mode-hook (lambda () (c-toggle-comment-style -1)))
 
 ;; To customize the edition on LaTeX documents
 (rc/require 'auctex)
