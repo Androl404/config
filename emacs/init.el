@@ -58,11 +58,6 @@
 ;; For dired if I have multiple dired windows to move/copy file with default path of the other buffer
 (setq dired-dwim-target t)
 
-;; To enable and use the 'evil-mode'
-; (rc/require 'evil)
-; (require 'evil)
-; (evil-mode 1)
-
 ;; To enable the Typescript mode
 (rc/require 'typescript-mode)
 (require 'typescript-mode)
@@ -114,7 +109,6 @@
 (global-set-key (kbd "M-n") 'move-text-down)
 
 (rc/require 
-    'treemacs 
     'php-mode 
     'typescript-mode 
     'magit 
@@ -129,4 +123,3 @@
 
 ;; To laod the custom-file
 (load custom-file)
-(put 'upcase-region 'disabled nil)
