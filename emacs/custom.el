@@ -25,7 +25,7 @@
  '(php-mode-coding-style 'psr2)
  '(php-mode-template-compatibility nil)
  '(warning-suppress-log-types '((comp) (comp)))
- '(whitespace-style
+ '(whitespace-style     ;; Credit to Mr. Zozin <https://github.com/rexim/dotfiles/blob/master/.emacs.custom.el>
    (quote
     (face tabs spaces trailing space-before-tab newline indentation empty space-after-tab space-mark tab-mark))))
 (custom-set-faces

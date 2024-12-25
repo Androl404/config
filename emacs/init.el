@@ -52,6 +52,18 @@
 ;; Use `//' comments instead if `/*' comments in c-mode
 (add-hook 'c-mode-hook (lambda () (c-toggle-comment-style -1)))
 
+;; Use whitespace mode with whitespace handling on certain mode
+(add-hook 'c++-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'c-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'simpc-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'lua-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'rust-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'markdown-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'python-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'php-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'go-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'yaml-mode-hook 'rc/set-up-whitespace-handling)
+
 ;; dired
 (require 'dired-x)
 (setq dired-listing-switches "-alh --group-directories-first")
