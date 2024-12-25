@@ -113,6 +113,12 @@ bindsym $mod+Return exec alacritty
 # start an Emacs frame from the daemon
 bindsym $mod+Shift+Return exec emacsclient -c -a 'emacs' # The space at the end is important
 
+# to launch the calculator
+bindsym XF86Calculator exec --no-startup-id gnome-calculator
+
+# to launch the music player
+bindsym XF86Tools exec --no-startup-id rhythmbox
+
 # kill focused window
 bindsym $mod+Shift+A kill
 
