@@ -8,9 +8,8 @@
  '(column-number-mode t)
  '(custom-enabled-themes '(gruber-darker))
  '(custom-safe-themes
-   '("01a9797244146bbae39b18ef37e6f2ca5bebded90d9fe3a2f342a9e863aaa4fd" default))
+   '("7fd8b914e340283c189980cd1883dbdef67080ad1a3a9cc3df864ca53bdc89cf" "bbb13492a15c3258f29c21d251da1e62f1abb8bbd492386a673dcfab474186af" "53a4efdca4c9fb870c3f92e4cfca0fbb638bb29b168a26a363298f9b1d9b9bcf" "01a9797244146bbae39b18ef37e6f2ca5bebded90d9fe3a2f342a9e863aaa4fd" default))
  '(doc-view-continuous t)
- '(evil-want-C-u-scroll t)
  '(ido-auto-merge-delay-time 0.7)
  '(ido-auto-merge-work-directories-length -1)
  '(ido-cr+-replace-completely t)
@@ -20,19 +19,14 @@
  '(ido-mode 'both nil (ido))
  '(ido-show-dot-for-dired nil)
  '(package-selected-packages
-   '(markdown-mode move-text auctex-latexmk company-auctex js2-mode lua-mode ac-php treemacs lsp-ltex company-math pabbrev auto-complete-auctex lsp-latex auctex smex rust-mode multiple-cursors magit typescript-mode undo-fu undo-tree evil company-box projectile ## phpt-mode flycheck php-mode gruber-darker-theme ido-completing-read+))
+   '(spacemacs-theme htmlize org-bullets markdown-mode move-text auctex-latexmk company-auctex js2-mode lua-mode ac-php lsp-ltex company-math pabbrev auto-complete-auctex lsp-latex auctex smex rust-mode multiple-cursors magit typescript-mode undo-fu undo-tree evil company-box projectile ## phpt-mode flycheck php-mode gruber-darker-theme ido-completing-read+))
  '(php-imenu-generic-expression 'php-imenu-generic-expression-simple)
  '(php-mode-coding-style 'psr2)
  '(php-mode-template-compatibility nil)
  '(warning-suppress-log-types '((comp) (comp)))
- '(whitespace-style     ;; Credit to Mr. Zozin <https://github.com/rexim/dotfiles/blob/master/.emacs.custom.el>
-   (quote
-    (face tabs spaces trailing space-before-tab newline indentation empty space-after-tab space-mark tab-mark))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+ '(whitespace-style
+   '(face tabs spaces trailing space-before-tab newline indentation empty space-after-tab space-mark tab-mark)))
+
+
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)

@@ -36,5 +36,5 @@ ln -sf "$SCRIPT_DIR/i3wm/.i3status.conf" ~/ # .config/i3/config
 ln -sf "$SCRIPT_DIR/emacs/rc.el" ~/.emacs.d/rc.el
 ln -sf "$SCRIPT_DIR/emacs/init.el" ~/.emacs.d/init.el
 ln -sf "$SCRIPT_DIR/emacs/custom.el" ~/.emacs.d/custom.el
-
-
+ln -sf "$SCRIPT_DIR/emacs/org.el" ~/.emacs.d/org.el
+ln -sf "$SCRIPT_DIR/emacs/org-style.css" ~/.emacs.d/org-style.css

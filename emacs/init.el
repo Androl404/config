@@ -8,6 +8,9 @@
 ;; Set custom file for Emacs auto configuration
 (setq custom-file "~/.emacs.d/custom.el")
 
+(setq user-full-name "Andrei Zeucianu"
+      user-mail-address "andrei.zeucianu@gmail.com")
+
 ;; Load multiple functions
 (load "~/.emacs.d/rc.el")
 (rc/require 'gruber-darker-theme)
@@ -133,5 +136,8 @@
     'auctex-latexmk
 )
 
-;; To laod the custom-file
+;; To load the org configuration
+(load "~/.emacs.d/org.el")
+
+;; To load the custom-file
 (load custom-file)
