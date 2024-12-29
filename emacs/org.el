@@ -38,16 +38,8 @@
      `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
      `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
      `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
-     `(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil))))))
+     `(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil)))))))
 
-  ;; For the line number font, to be Iosevka everywhere
-  ;; (set-face-attribute 'line-number nil :inherit 'fixed)
-
-  ;; To have custom font
-  (custom-theme-set-faces
-   'user
-   '(variable-pitch ((t (:family "Roboto" :height 180 :weight regular))))
-   '(fixed-pitch ((t ( :family "Iosevka Nerd Font" :height 160))))))
 (add-hook 'server-after-make-frame-hook 'set-org-fonts)
 
 ;; To enable different backend export options
