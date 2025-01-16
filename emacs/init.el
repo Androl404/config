@@ -21,6 +21,10 @@
     indent-tabs-mode nil                            ;; For using spaces instead of tabs
     compilation-scroll-output t)                    ;; Output in compilation mode scrolls as it appears
 
+;; To set set split threshold for horizontal split
+(setq window-combination-resize t
+      split-width-threshold 300)
+
 ;; Turn off some unneeded UI elements
 (menu-bar-mode -1)  ; Leave this one on if you're a beginner!
 (tool-bar-mode -1)
