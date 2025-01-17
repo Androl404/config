@@ -135,6 +135,7 @@
     'auto-complete-auctex 
     'flycheck 
     'eglot 
+    'lsp-mode 
     'lua-mode 
     'company-auctex 
     'auctex-latexmk
