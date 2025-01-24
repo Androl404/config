@@ -139,6 +139,7 @@
     'lua-mode 
     'company-auctex 
     'auctex-latexmk
+    'evil
 )
 
 ;; To load the org configuration

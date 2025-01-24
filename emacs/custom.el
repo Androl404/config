@@ -19,7 +19,7 @@
  '(ido-mode 'both nil (ido))
  '(ido-show-dot-for-dired nil)
  '(package-selected-packages
-   '(lsp-mode spacemacs-theme htmlize org-bullets markdown-mode move-text auctex-latexmk company-auctex js2-mode lua-mode ac-php lsp-ltex company-math pabbrev auto-complete-auctex lsp-latex auctex smex rust-mode multiple-cursors magit typescript-mode undo-fu undo-tree evil company-box projectile ## phpt-mode flycheck php-mode gruber-darker-theme ido-completing-read+))
+   '(evil-mode lsp-mode spacemacs-theme htmlize org-bullets markdown-mode move-text auctex-latexmk company-auctex js2-mode lua-mode ac-php lsp-ltex company-math pabbrev auto-complete-auctex lsp-latex auctex smex rust-mode multiple-cursors magit typescript-mode undo-fu undo-tree evil company-box projectile ## phpt-mode flycheck php-mode gruber-darker-theme ido-completing-read+))
  '(php-imenu-generic-expression 'php-imenu-generic-expression-simple)
  '(php-mode-coding-style 'psr2)
  '(php-mode-template-compatibility nil)
