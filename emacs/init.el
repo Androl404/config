@@ -103,7 +103,7 @@
 (global-set-key (kbd "C-M->") 'mc/skip-to-next-like-this)
 
 ;; Key-binding to duplicate line
-(global-set-key (kbd "C-,") 'duplicate-line)
+(global-set-key (kbd "C-M-,") 'duplicate-line)
 
 ;; To customize the edition on LaTeX documents
 (rc/require 'auctex)
