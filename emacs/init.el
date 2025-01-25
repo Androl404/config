@@ -60,12 +60,14 @@
 (add-hook 'c-mode-hook (lambda () (c-toggle-comment-style -1)))
 
 ;; Use whitespace mode with whitespace handling on certain mode
+(add-hook 'csharp-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'c++-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'c-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'simpc-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'lua-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'rust-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'markdown-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'LaTeX-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'python-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'php-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'go-mode-hook 'rc/set-up-whitespace-handling)
@@ -116,6 +118,10 @@
 
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-AUCTeX t)
+
+;; To customize Markdown document
+(add-hook 'markdown-mode-hook 'flyspell-mode)
+(add-hook 'markdown-mode-hook 'visual-line-mode)
 
 ;; For the company mode
 (rc/require 'company-math 'company-box)
