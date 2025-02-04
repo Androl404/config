@@ -46,3 +46,11 @@ ln -sf "$SCRIPT_DIR/rofi/config.rasi" ~/.config/rofi/config.rasi
 ln -sf "$SCRIPT_DIR/rofi/themes/dtos-center-new.rasi" ~/.config/rofi/themes/dtos-center-new.rasi
 ln -sf "$SCRIPT_DIR/rofi/themes/dtos-center.rasi" ~/.config/rofi/themes/dtos-center.rasi
 ln -sf "$SCRIPT_DIR/rofi/themes/dtos-dmenu.rasi" ~/.config/rofi/themes/dtos-dmenu.rasi
+
+# For the screenlayout script
+ln -sf "$SCRIPT_DIR/screenlayout/home.sh" ~/.screenlayout/home.sh 
+ln -sf "$SCRIPT_DIR/screenlayout/home_second_screen.sh" ~/.screenlayout/home_second_screen.sh 
+ln -sf "$SCRIPT_DIR/screenlayout/laptop_screen.sh" ~/.screenlayout/laptop_screen.sh 
+ln -sf "$SCRIPT_DIR/screenlayout/duplicate_1080.sh" ~/.screenlayout/duplicate_1080.sh 
+ln -sf "$SCRIPT_DIR/screenlayout/extend_1080.sh" ~/.screenlayout/extend_1080.sh 
+ln -sf "$SCRIPT_DIR/screenlayout/extend_1440.sh" ~/.screenlayout/extend_1440.sh 
