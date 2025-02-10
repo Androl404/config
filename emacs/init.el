@@ -146,6 +146,8 @@
     'company-auctex 
     'auctex-latexmk
     'evil
+    'editorconfig
+    'jsonrpc
 )
 
 ;; To load the org configuration
