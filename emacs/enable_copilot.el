@@ -4,7 +4,7 @@
 
 ;; Load the filecopilot_balanced.el
 (load-file "/media/andrei/Data/dev/third_repo/copilot.el/copilot-balancer.el")
-(load-file "/media/andrei/Data/dev/third_repo/copilot.el/copilot")
+(load-file "/media/andrei/Data/dev/third_repo/copilot.el/copilot.el")
 
 (require 'copilot)
 (add-hook 'prog-mode-hook 'copilot-mode)
