@@ -20,6 +20,7 @@ mkdir -p ~/.config/i3/
 mkdir -p ~/.config/rofi/
 mkdir -p ~/.config/rofi/themes/
 mkdir -p ~/.emacs.d/
+mkdir -p ~/.screenlayout/
 
 # For NeoVim
 ln -sf "$SCRIPT_DIR/neovim/init.lua" ~/.config/nvim/init.lua
@@ -27,7 +28,7 @@ ln -sf "$SCRIPT_DIR/neovim/init.lua" ~/.config/nvim/init.lua
 # For Alacritty
 ln -sf "$SCRIPT_DIR/alacritty/alacritty.toml" ~/.config/alacritty/alacritty.toml
 
-# For Alacritty
+# For Kitty
 ln -sf "$SCRIPT_DIR/kitty/kitty.conf" ~/.config/kitty/kitty.conf
 
 # For i3wm
