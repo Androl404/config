@@ -16,7 +16,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # font pango:monospace 8
 # font pango:JetBrains Mono 9
-font pango:Iosevka 10
+font pango:Iosevka 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -60,10 +60,13 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # To authentificate when needed
-exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+# exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 # To set the wallapper
-exec --no-startup-id /home/andrei/Documents/background.sh
+exec --no-startup-id /home/andrei/Documents/background.sh &
+
+# To start the compositor
+exec --no-startup-id picom --backend xrender &
 
 # To start the program who verify the battery
 exec --no-startup-id /home/andrei/Documents/i3-battery-popup/i3-battery-popup -L 20% -I 2% -t 30s -N -s /home/andrei/Documents/i3-battery-popup/i3-battery-popup.wav -v 100 -f pango:JetBrains Mono 14
@@ -84,7 +87,7 @@ bindsym Mod1+Shift+l exec systemctl suspend
 bindsym $mod+b exec boomer
 
 # Enable touchpad tap as click
-exec xinput set-prop "ELAN06FA:00 04F3:327E Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "ELAN07DA:00 04F3:31ED Touchpad" "libinput Tapping Enabled" 1
 
 # Bind Alt+Tab to switch between workspaces
 bindsym Mod1+Tab workspace next
@@ -273,6 +276,6 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        font pango:Iosevka Semi-Bold 14
+        font pango:Iosevka Semi-Bold 12
         # font pango:Jetbrains Mono 12
 }
