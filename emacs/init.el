@@ -148,7 +148,11 @@
     'evil
     'editorconfig
     'jsonrpc
+    'exec-path-from-shell
 )
+
+;; To use the PATH from shell (use the .bashrc file)
+(exec-path-from-shell-initialize)
 
 ;; To load the org configuration
 (load "~/.emacs.d/org.el")

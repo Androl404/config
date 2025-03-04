@@ -22,7 +22,13 @@
  '(ido-everywhere nil)
  '(ido-mode 'both nil (ido))
  '(ido-show-dot-for-dired nil)
- '(package-selected-packages nil)
+ '(package-selected-packages
+   '(auctex-latexmk auto-complete-auctex company-auctex company-box
+                    company-math evil exec-path-from-shell flycheck
+                    gruber-darker-theme htmlize ido-completing-read+
+                    lsp-mode lua-mode magit move-text multiple-cursors
+                    org-bullets php-mode rust-mode smex
+                    typescript-mode))
  '(php-imenu-generic-expression 'php-imenu-generic-expression-simple)
  '(php-mode-coding-style 'psr2)
  '(php-mode-template-compatibility nil)
