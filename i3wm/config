@@ -69,15 +69,15 @@ exec --no-startup-id /home/andrei/Documents/background.sh &
 exec --no-startup-id picom --backend xrender &
 
 # To start the program who verify the battery
-exec --no-startup-id /home/andrei/Documents/i3-battery-popup/i3-battery-popup -L 20% -I 2% -t 30s -N -s /home/andrei/Documents/i3-battery-popup/i3-battery-popup.wav -v 100 -f pango:JetBrains Mono 14
+# exec --no-startup-id /home/andrei/Documents/i3-battery-popup/i3-battery-popup -L 20% -I 2% -t 30s -N -s /home/andrei/Documents/i3-battery-popup/i3-battery-popup.wav -v 100 -f pango:JetBrains Mono 14
+exec --no-startup-id /home/andrei/Documents/i3-battery-popup/i3-battery-popup -L 20% -I 2% -t 30s -n -i "battery-caution-symbolic" &
 
 # To automatically lock computer after inactivity time
 # Not needed because of xss-lock
 # exec --no-startup-id "xautolock -detectsleep -time 5 -locker \"i3lock -c 54084e && sleep 0.3 && xset dpms force off\""
 
 # Key-binding to lock the screen
-# bindsym Mod1+l exec i3lock -c 54084e && sleep 1 && xset dpms force off
-bindsym Mod1+l exec xset dpms force off
+bindsym Mod1+l exec loginctl lock-session
 
 # Key-binding to suspend (sleep) the computer
 # bindsym Mod1+Shift+l exec i3lock -c 54084e && systemctl suspend
