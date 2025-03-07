@@ -20,7 +20,6 @@ mkdir -p ~/.config/i3/
 mkdir -p ~/.config/rofi/
 mkdir -p ~/.config/rofi/themes/
 mkdir -p ~/.emacs.d/
-# mkdir -p ~/.screenlayout/
 
 # For NeoVim
 ln -sf "$SCRIPT_DIR/neovim/init.lua" ~/.config/nvim/init.lua
@@ -47,11 +46,3 @@ ln -sf "$SCRIPT_DIR/rofi/config.rasi" ~/.config/rofi/config.rasi
 ln -sf "$SCRIPT_DIR/rofi/themes/dtos-center-new.rasi" ~/.config/rofi/themes/dtos-center-new.rasi
 ln -sf "$SCRIPT_DIR/rofi/themes/dtos-center.rasi" ~/.config/rofi/themes/dtos-center.rasi
 ln -sf "$SCRIPT_DIR/rofi/themes/dtos-dmenu.rasi" ~/.config/rofi/themes/dtos-dmenu.rasi
-
-# For the screenlayout script
-# ln -sf "$SCRIPT_DIR/screenlayout/home.sh" ~/.screenlayout/home.sh 
-# ln -sf "$SCRIPT_DIR/screenlayout/home_second_screen.sh" ~/.screenlayout/home_second_screen.sh 
-# ln -sf "$SCRIPT_DIR/screenlayout/laptop_screen.sh" ~/.screenlayout/laptop_screen.sh 
-# ln -sf "$SCRIPT_DIR/screenlayout/duplicate_1080.sh" ~/.screenlayout/duplicate_1080.sh 
-# ln -sf "$SCRIPT_DIR/screenlayout/extend_1080.sh" ~/.screenlayout/extend_1080.sh 
-# ln -sf "$SCRIPT_DIR/screenlayout/extend_1440.sh" ~/.screenlayout/extend_1440.sh 
