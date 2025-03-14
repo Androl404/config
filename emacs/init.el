@@ -148,6 +148,7 @@
     'evil
     'editorconfig
     'jsonrpc
+    'matlab-mode
     'exec-path-from-shell
 )
 
