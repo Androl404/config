@@ -98,7 +98,7 @@
 (global-set-key (kbd "C-M-/") 'mc/mark-all-like-this) ; select text first. finds all occurrences.
 (global-set-key (kbd "C-M-,") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-M-.") 'mc/mark-next-like-this)
-;; Skip this match and move to next one. (Note YouTube won't allow angle brackets here.)
+;; Skip this match and move to next one.
 (global-set-key (kbd "C-M-<") 'mc/skip-to-previous-like-this)
 (global-set-key (kbd "C-M->") 'mc/skip-to-next-like-this)
 
