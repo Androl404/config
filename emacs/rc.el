@@ -23,6 +23,7 @@
     (rc/require theme-package)
     (load-theme theme t)))
 
+;; Splits between horizontally and vertically splited windows
 (defun rc/toggle-window-split ()
   (interactive)
   (if (= (count-windows) 2)
@@ -50,7 +51,13 @@
 
 ;; (global-set-key (kbd "C-x |") 'toggle-window-split)
 
+;; Enable whitespace-mode with special configuration (custom.el)
 (defun rc/set-up-whitespace-handling ()
   (interactive)
   (whitespace-mode 1)
   (add-to-list 'write-file-functions 'delete-trailing-whitespace))
+
+;; To clear the kill-ring
+(defun rc/clear-kill-ring ()
+  (interactive)
+  (setq kill-ring nil))
