@@ -35,7 +35,8 @@
  '(warning-suppress-log-types '((comp) (comp)))
  '(whitespace-style
    '(face tabs spaces trailing space-before-tab newline indentation empty
-          space-after-tab space-mark tab-mark)))
+          space-after-tab space-mark tab-mark))
+ '(markdown-command "/usr/bin/pandoc"))
 
 
 (put 'downcase-region 'disabled nil)
