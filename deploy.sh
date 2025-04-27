@@ -20,6 +20,7 @@ mkdir -p ~/.config/i3/
 mkdir -p ~/.config/rofi/
 mkdir -p ~/.config/rofi/themes/
 mkdir -p ~/.config/hyprland/
+mkdir -p ~/.config/waybar/
 mkdir -p ~/.emacs.d/
 
 # For NeoVim
@@ -47,7 +48,11 @@ ln -sf "$SCRIPT_DIR/rofi/config.rasi" ~/.config/rofi/config.rasi
 ln -sf "$SCRIPT_DIR/rofi/themes/dtos-center-new.rasi" ~/.config/rofi/themes/dtos-center-new.rasi
 ln -sf "$SCRIPT_DIR/rofi/themes/dtos-center.rasi" ~/.config/rofi/themes/dtos-center.rasi
 ln -sf "$SCRIPT_DIR/rofi/themes/dtos-dmenu.rasi" ~/.config/rofi/themes/dtos-dmenu.rasi
+ln -sf "$SCRIPT_DIR/rofi/leave.sh" ~/.config/rofi/leave.sh
 
-# For hyprland
+# For Hyprland
 ln -sf "$SCRIPT_DIR/hyprland/hyprland.conf" ~/.config/hyprland/hyprland.conf
 
+# For Waybar
+ln -sf "$SCRIPT_DIR/waybar/config" ~/.config/waybar/config
+ln -sf "$SCRIPT_DIR/waybar/style.css" ~/.config/waybar/style.css
