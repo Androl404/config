@@ -1,7 +1,7 @@
 [window]
 opacity = 1
 decorations = "Full"
-padding = {x=0, y=0}
+padding = {x=2, y=0}
 
 [font]
 normal.family = "Iosevka Nerd Font"
