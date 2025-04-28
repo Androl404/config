@@ -60,7 +60,7 @@
         "format": "{icon}  {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
+        "format-alt": "{icon}  {time}",
         "format-icons": ["", "", "", "", ""]
     },
 
@@ -127,7 +127,9 @@
     },
 
     "custom/wallpaper":{
+        "tooltip": true,
         "format":" ",
+        "tooltip-format":"Click to change the desktop background.",
         "on-click": "bash ~/Documents/Wbackground.sh"
     }
 }
