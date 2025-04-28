@@ -17,7 +17,6 @@
     },
 
     "hyprland/workspaces": {
-        "disable-scroll": true,
         "rotate": 0,
         "all-outputs": false,
         "active-only": false,
