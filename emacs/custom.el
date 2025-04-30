@@ -22,21 +22,21 @@
  '(ido-everywhere nil)
  '(ido-mode 'both nil (ido))
  '(ido-show-dot-for-dired nil)
+ '(markdown-command "/usr/bin/pandoc")
  '(package-selected-packages
    '(auctex-latexmk auto-complete-auctex company-auctex company-box
-                    company-math evil exec-path-from-shell flycheck
-                    gruber-darker-theme htmlize ido-completing-read+
-                    lsp-mode lua-mode magit matlab-mode move-text
-                    multiple-cursors org-bullets php-mode rust-mode
-                    smex typescript-mode))
+                    company-math doom-themes evil exec-path-from-shell
+                    flycheck gruber-darker-theme htmlize
+                    ido-completing-read+ lsp-mode lua-mode magit
+                    matlab-mode move-text multiple-cursors org-bullets
+                    php-mode rust-mode smex typescript-mode))
  '(php-imenu-generic-expression 'php-imenu-generic-expression-simple)
  '(php-mode-coding-style 'psr2)
  '(php-mode-template-compatibility nil)
  '(warning-suppress-log-types '((comp) (comp)))
  '(whitespace-style
    '(face tabs spaces trailing space-before-tab newline indentation empty
-          space-after-tab space-mark tab-mark))
- '(markdown-command "/usr/bin/pandoc"))
+          space-after-tab space-mark tab-mark)))
 
 
 (put 'downcase-region 'disabled nil)
