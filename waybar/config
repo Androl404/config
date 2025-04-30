@@ -130,6 +130,7 @@
         "tooltip": true,
         "format":" ",
         "tooltip-format":"Click to change the desktop background.",
-        "on-click": "bash ~/Documents/Wbackground.sh"
+        "on-click": "bash ~/Documents/Wbackground.sh",
+        "on-click-right": "killall swaybg && swaybg -m fill -i ~/Images/background/Anime_City_Night.png"
     }
 }
