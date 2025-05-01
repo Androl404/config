@@ -1,8 +1,8 @@
 {
     "layer": "top",
-    "modules-left": ["custom/launcher","cpu","memory","custom/updates","custom/media","tray"],
+    "modules-left": ["custom/launcher","cpu","memory","custom/updates","custom/media","custom/wallpaper","tray"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["custom/wallpaper","network","backlight","pulseaudio","clock", "battery","custom/power"],
+    "modules-right": ["network","backlight","pulseaudio","clock", "battery","custom/power"],
 
     "pulseaudio": {
         "tooltip": true,
@@ -122,7 +122,7 @@
         "format": "{} Updates",
         "exec": "apt-get -s -o Debug::NoLocking=true upgrade | grep -c ^Inst",
         "exec-if": "[ $(apt-get -s -o Debug::NoLocking=true upgrade | grep -c ^Inst) != 0 ]",
-        "interval": 300
+        "interval": 1200
         // "on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' "
     },
 
