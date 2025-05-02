@@ -134,6 +134,9 @@
 (global-set-key (kbd "M-p") 'move-text-up)
 (global-set-key (kbd "M-n") 'move-text-down)
 
+;; Remplace useless list directory binding
+(global-set-key (kbd "C-x C-d") 'ido-dired)
+
 (rc/require 
     'php-mode 
     'typescript-mode 
