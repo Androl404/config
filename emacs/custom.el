@@ -29,7 +29,8 @@
                     flycheck gruber-darker-theme htmlize
                     ido-completing-read+ lsp-mode lua-mode magit
                     matlab-mode move-text multiple-cursors org-bullets
-                    php-mode rust-mode smex typescript-mode))
+                    php-mode rust-mode smex typescript-mode
+                    vscode-dark-plus-theme))
  '(php-imenu-generic-expression 'php-imenu-generic-expression-simple)
  '(php-mode-coding-style 'psr2)
  '(php-mode-template-compatibility nil)
@@ -46,7 +47,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-document-title ((t (:inherit default :weight bold :font "Source Sans Pro" :height 2.0 :underline nil))))
  '(org-level-1 ((t (:inherit default :weight bold :font "Source Sans Pro" :height 1.75))))
  '(org-level-2 ((t (:inherit default :weight bold :font "Source Sans Pro" :height 1.5))))
  '(org-level-3 ((t (:inherit default :weight bold :font "Source Sans Pro" :height 1.25))))

@@ -140,6 +140,7 @@
 (rc/require 
     'php-mode 
     'typescript-mode 
+    'markdown-mode 
     'magit 
     'rust-mode 
     'auto-complete-auctex 
