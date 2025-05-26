@@ -24,13 +24,13 @@
  '(ido-show-dot-for-dired nil)
  '(markdown-command "/usr/bin/pandoc")
  '(package-selected-packages
-   '(auctex-latexmk auto-complete-auctex company-auctex company-box
-                    company-math doom-themes evil exec-path-from-shell
-                    flycheck gruber-darker-theme htmlize
-                    ido-completing-read+ lsp-mode lua-mode magit
-                    marginalia matlab-mode move-text multiple-cursors
-                    org-bullets php-mode rust-mode smex
-                    typescript-mode vertico vscode-dark-plus-theme))
+   '(auctex-latexmk auto-complete-auctex catppuccin-theme company-auctex
+                    company-box company-math doom-themes evil
+                    exec-path-from-shell flycheck gruber-darker-theme
+                    htmlize ido-completing-read+ lsp-mode lua-mode
+                    magit marginalia matlab-mode move-text
+                    multiple-cursors org-bullets php-mode rust-mode
+                    smex typescript-mode vscode-dark-plus-theme))
  '(php-imenu-generic-expression 'php-imenu-generic-expression-simple)
  '(php-mode-coding-style 'psr2)
  '(php-mode-template-compatibility nil)
