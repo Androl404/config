@@ -25,6 +25,9 @@
 (setq window-combination-resize t
       split-width-threshold 300)
 
+;; Set default grep command to be recursive
+(setq grep-command "grep --color=auto -rnH --null -e ")
+
 ;; Turn off some unneeded UI elements
 (menu-bar-mode -1)  ; Leave this one on if you're a beginner!
 (tool-bar-mode -1)
