@@ -61,3 +61,55 @@
 (defun rc/clear-kill-ring ()
   (interactive)
   (setq kill-ring nil))
+
+;; To run a command on all marked files in dired
+(defun rc/dired-do-command (command)
+  "Run COMMAND on marked files. Any files not already open will be opened.
+After this command has been run, any buffers it's modified will remain
+open and unsaved."
+  (interactive "CRun on marked files M-x ")
+  (save-window-excursion
+    (mapc (lambda (filename)
+            (find-file filename)
+            (call-interactively command))
+          (dired-get-marked-files))))
+
+;; Variable to save the marking of s-expressions backward
+(defvar rc/mark-backward-sexp-anchor nil
+  "Anchor point for repeated backward sexp marking.")
+
+;; Function to mark s-expressions backward
+(defun rc/mark-backward-sexp ()
+  "Incrementally mark s-expressions backward without moving point forward.
+If no more s-expressions can be marked, keep the current region and show a message."
+  (interactive)
+  (let ((inhibit-quit t)
+        (original-point (point))
+        (original-mark (mark)))
+    (condition-case err
+        (if (not (region-active-p))
+            ;; First invocation: set anchor and mark
+            (progn
+              (setq rc/mark-backward-sexp-anchor (point))
+              (backward-sexp)
+              (set-mark (point))
+              (goto-char rc/mark-backward-sexp-anchor))
+          ;; Subsequent invocations: extend region backward
+          (let ((current-point (point)))
+            (goto-char (mark))
+            (backward-sexp)
+            (set-mark (point))
+            (goto-char current-point)))
+      (scan-error
+       ;; Restore original region and show message
+       (set-mark original-mark)
+       (goto-char original-point)
+       (message "No more s-expressions to mark backward.")))
+    (setq deactivate-mark nil)))
+
+;; Hook to reset the variable storing the position of the mark
+(add-hook 'deactivate-mark-hook
+          (lambda () (setq rc/mark-backward-sexp-anchor nil)))
+
+(define-key global-map (kbd "C-M-S-SPC") #'rc/mark-backward-sexp)
+;; (global-set-key (kbd "C-M-!") 'rc/mark-backward-sexp)
