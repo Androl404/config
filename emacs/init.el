@@ -27,6 +27,7 @@
 
 ;; Set default grep command to be recursive
 (setq grep-command "grep --color=auto -rnH --null -e ")
+(setq grep-use-null-device nil)
 
 ;; Turn off some unneeded UI elements
 (menu-bar-mode -1)  ; Leave this one on if you're a beginner!
