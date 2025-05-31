@@ -34,6 +34,10 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+;; To disable the bell
+;; (setq visible-bell t) ;; Switch to a visual bell
+(setq ring-bell-function 'ignore) ;; Disable the belle without graphical replacement
+
 ;; Display line numbers in every buffer
 (global-display-line-numbers-mode 1)
 
