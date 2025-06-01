@@ -113,3 +113,28 @@ If no more s-expressions can be marked, keep the current region and show a messa
 
 (define-key global-map (kbd "C-M-S-SPC") #'rc/mark-backward-sexp)
 ;; (global-set-key (kbd "C-M-!") 'rc/mark-backward-sexp)
+
+;; If text is marked (mark activated) and search is launched, use the marked text as search string.
+(defun rc/isearch-forward-from-region ()
+  "If region is active, use its content as the initial search string."
+  (interactive)
+  (let ((search-text (when (use-region-p)
+                       (buffer-substring-no-properties (region-beginning) (region-end)))))
+    (deactivate-mark)
+    (isearch-mode t nil nil nil)
+    (when search-text
+      (isearch-yank-string search-text))))
+
+(defun rc/isearch-backward-from-region ()
+  "If region is active, use its content as the initial reverse search string."
+  (interactive)
+  (let ((search-text (when (use-region-p)
+                       (buffer-substring-no-properties (region-beginning) (region-end)))))
+    (deactivate-mark)
+    (isearch-mode nil nil nil nil)
+    (when search-text
+      (isearch-yank-string search-text))))
+
+(global-set-key (kbd "C-s") #'rc/isearch-forward-from-region)
+(global-set-key (kbd "C-r") #'rc/isearch-backward-from-region)
+
