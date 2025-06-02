@@ -65,6 +65,7 @@
 (require 'smex)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "<menu>") 'smex)
+(global-set-key (kbd "<apps>") 'smex)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; To set indetation as 4 spaces for C (Is it really needed?)
