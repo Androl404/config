@@ -29,6 +29,10 @@
 (setq grep-command "grep --color=auto -rnH --null -e ")
 (setq grep-use-null-device nil)
 
+;; For the display column indicator mode
+(setq display-fill-column-indicator-column t
+      fill-column 80)
+
 ;; Turn off some unneeded UI elements
 (menu-bar-mode -1)  ; Leave this one on if you're a beginner!
 (tool-bar-mode -1)
@@ -37,6 +41,9 @@
 ;; To disable the bell
 ;; (setq visible-bell t) ;; Switch to a visual bell
 (setq ring-bell-function 'ignore) ;; Disable the belle without graphical replacement
+
+;; Use short answer yes when quickly reverting a buffer (C-x x g)
+;; (setq revert-buffer-quick-short-answers t)
 
 ;; Display line numbers in every buffer
 (global-display-line-numbers-mode 1)

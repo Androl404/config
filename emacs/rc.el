@@ -137,4 +137,3 @@ If no more s-expressions can be marked, keep the current region and show a messa
 
 (global-set-key (kbd "C-s") #'rc/isearch-forward-from-region)
 (global-set-key (kbd "C-r") #'rc/isearch-backward-from-region)
-
