@@ -44,6 +44,8 @@ exec --no-startup-id dunst &
 # Start the Emacs daemon in the background at startup
 exec --no-startup-id emacs --daemon &
 
+bindsym Ctrl+F6 exec --no-startup-id ~/Documents/background.sh
+
 ##  Screenshots in files
 bindsym Ctrl+Print exec --no-startup-id maim --format=png "/home/$USER/Images/Screenshots/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --format=png --hidecursor --window $(xdotool getactivewindow) "/home/$USER/Images/Screenshots/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
