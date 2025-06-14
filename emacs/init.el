@@ -19,7 +19,8 @@
     make-backup-files nil                           ;; To stop creating back-ups files
     tab-width 4                                     ;; To make tab width as 4 spaces
     indent-tabs-mode nil                            ;; For using spaces instead of tabs
-    compilation-scroll-output t)                    ;; Output in compilation mode scrolls as it appears
+    compilation-scroll-output t                     ;; Output in compilation mode scrolls as it appears
+    grep-scroll-output t)                    ;; Output in grep mode scrolls as it appears
 
 ;; To set set split threshold for horizontal split
 (setq window-combination-resize t
