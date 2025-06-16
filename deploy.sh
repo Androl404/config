@@ -41,6 +41,7 @@ ln -sf "$SCRIPT_DIR/emacs/rc.el" ~/.emacs.d/rc.el
 ln -sf "$SCRIPT_DIR/emacs/init.el" ~/.emacs.d/init.el
 ln -sf "$SCRIPT_DIR/emacs/custom.el" ~/.emacs.d/custom.el
 ln -sf "$SCRIPT_DIR/emacs/org.el" ~/.emacs.d/org.el
+ln -sf "$SCRIPT_DIR/emacs/git-windows.el" ~/.emacs.d/git-windows.el
 ln -sf "$SCRIPT_DIR/emacs/org-style.css" ~/.emacs.d/org-style.css
 
 # For Rofi

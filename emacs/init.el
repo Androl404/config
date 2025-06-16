@@ -180,5 +180,8 @@
 ;; To load the org configuration
 (load "~/.emacs.d/org.el")
 
+;; Load the tricks to make Magit faster on MS Windows
+;; (load "~/.emacs.d/git-windows.el")
+
 ;; To load the custom-file
 (load custom-file)
