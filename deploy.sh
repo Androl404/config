@@ -21,6 +21,7 @@ mkdir -p ~/.config/rofi/
 mkdir -p ~/.config/rofi/themes/
 mkdir -p ~/.config/hyprland/
 mkdir -p ~/.config/waybar/
+mkdir -p ~/.config/sway/
 mkdir -p ~/.emacs.d/
 
 # For NeoVim
@@ -57,3 +58,6 @@ ln -sf "$SCRIPT_DIR/hyprland/hyprland.conf" ~/.config/hyprland/hyprland.conf
 # For Waybar
 ln -sf "$SCRIPT_DIR/waybar/config" ~/.config/waybar/config
 ln -sf "$SCRIPT_DIR/waybar/style.css" ~/.config/waybar/style.css
+
+# For sway
+ln -sf "$SCRIPT_DIR/sway/config" ~/.config/sway/config
