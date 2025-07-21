@@ -137,3 +137,12 @@ If no more s-expressions can be marked, keep the current region and show a messa
 
 (global-set-key (kbd "C-s") #'rc/isearch-forward-from-region)
 (global-set-key (kbd "C-r") #'rc/isearch-backward-from-region)
+
+;; To show and copy (kill) the absolute path of the current buffer.
+(defun rc/show-file-name ()
+  "Show the full path file name in the minibuffer."
+  (interactive)
+  (message (buffer-file-name))
+  (kill-new (buffer-file-name)))
+
+(global-set-key [C-f1] 'rc/show-file-name)
