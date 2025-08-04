@@ -145,6 +145,7 @@
 (rc/require 'company-math 'company-box)
 (require 'company)
 (global-company-mode)
+(setq company-idle-delay 0.0)
 
 ;; To move Text
 (rc/require 'move-text)
