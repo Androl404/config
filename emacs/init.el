@@ -155,6 +155,12 @@
 ;; Remplace useless list directory binding
 (global-set-key (kbd "C-x C-d") 'ido-dired)
 
+;; To find things to do and to fix
+(rc/require 'fixmee)
+(require 'fixmee)
+(require 'button-lock)
+(global-fixmee-mode 1)
+
 (rc/require 
     'php-mode 
     'typescript-mode 

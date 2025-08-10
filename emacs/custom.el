@@ -26,11 +26,12 @@
  '(package-selected-packages
    '(auctex-latexmk auto-complete-auctex catppuccin-theme company-auctex
                     company-box company-math doom-themes evil
-                    exec-path-from-shell flycheck gruber-darker-theme
-                    htmlize ido-completing-read+ lsp-mode lua-mode
-                    magit marginalia matlab-mode move-text
-                    multiple-cursors org-bullets php-mode rust-mode
-                    smex typescript-mode vscode-dark-plus-theme))
+                    exec-path-from-shell fixmee flycheck
+                    gruber-darker-theme htmlize ido-completing-read+
+                    lsp-mode lua-mode magit marginalia matlab-mode
+                    move-text multiple-cursors org-bullets php-mode
+                    rust-mode smex typescript-mode
+                    vscode-dark-plus-theme))
  '(php-imenu-generic-expression 'php-imenu-generic-expression-simple)
  '(php-mode-coding-style 'psr2)
  '(php-mode-template-compatibility nil)
