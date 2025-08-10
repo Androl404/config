@@ -152,8 +152,11 @@
 (global-set-key (kbd "M-p") 'move-text-up)
 (global-set-key (kbd "M-n") 'move-text-down)
 
-;; Remplace useless list directory binding
+;; Replace useless list directory binding
 (global-set-key (kbd "C-x C-d") 'ido-dired)
+
+;; Replace useless buffer list binding
+(global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
 
 ;; To find things to do and to fix
 (rc/require 'fixmee)
