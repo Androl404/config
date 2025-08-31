@@ -159,10 +159,10 @@
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
 
 ;; To find things to do and to fix
-(rc/require 'fixmee)
-(require 'fixmee)
-(require 'button-lock)
-(global-fixmee-mode 1)
+;; (rc/require 'fixmee)
+;; (require 'fixmee)
+;; (require 'button-lock)
+;; (global-fixmee-mode 1)
 
 (rc/require 
     'php-mode 
