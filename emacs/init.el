@@ -50,7 +50,7 @@
 (global-display-line-numbers-mode 1)
 
 ;; Display relative line numbers
-(setq display-line-numbers-type 'relative) 
+(setq display-line-numbers-type 'relative)
 
 ;; Set custom font
 (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-17")) ; For compatibility with emacsclient
@@ -164,18 +164,24 @@
 ;; (require 'button-lock)
 ;; (global-fixmee-mode 1)
 
-(rc/require 
-    'php-mode 
-    'typescript-mode 
-    'markdown-mode 
-    'magit 
-    'rust-mode 
-    'auto-complete-auctex 
-    'flycheck 
-    'eglot 
-    'lsp-mode 
-    'lua-mode 
-    'company-auctex 
+;; For typst mode with tree-sitter
+(rc/require 'typst-ts-mode)
+(add-to-list 'treesit-language-source-alist
+             '(typst "https://github.com/uben0/tree-sitter-typst"))
+(treesit-install-language-grammar 'typst)
+
+(rc/require
+    'php-mode
+    'typescript-mode
+    'markdown-mode
+    'magit
+    'rust-mode
+    'auto-complete-auctex
+    'flycheck
+    'eglot
+    'lsp-mode
+    'lua-mode
+    'company-auctex
     'auctex-latexmk
     'evil
     'editorconfig

@@ -30,7 +30,7 @@
                     gruber-darker-theme htmlize ido-completing-read+
                     lsp-mode lua-mode magit marginalia matlab-mode
                     move-text multiple-cursors org-bullets php-mode
-                    rust-mode smex typescript-mode
+                    rust-mode smex typescript-mode typst-ts-mode
                     vscode-dark-plus-theme))
  '(php-imenu-generic-expression 'php-imenu-generic-expression-simple)
  '(php-mode-coding-style 'psr2)
