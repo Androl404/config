@@ -166,9 +166,12 @@
 
 ;; For typst mode with tree-sitter
 (rc/require 'typst-ts-mode)
-(add-to-list 'treesit-language-source-alist
-             '(typst "https://github.com/uben0/tree-sitter-typst"))
-(treesit-install-language-grammar 'typst)
+;; (add-to-list 'treesit-language-source-alist
+;;              '(typst "https://github.com/uben0/tree-sitter-typst"))
+;; (treesit-install-language-grammar 'typst)
+(add-hook 'typst-ts-mode-hook 'flyspell-mode)
+(add-hook 'typst-ts-mode-hook 'visual-line-mode)
+
 
 (rc/require
     'php-mode
