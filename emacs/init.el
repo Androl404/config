@@ -22,11 +22,11 @@
 (load "~/.emacs.d/rc.el")
 
 (setq-default inhibit-splash-screen t               ;; Don't show the splash screen
-    make-backup-files nil                           ;; To stop creating back-ups files
-    tab-width 4                                     ;; To make tab width as 4 spaces
-    indent-tabs-mode nil                            ;; For using spaces instead of tabs
-    compilation-scroll-output t                     ;; Output in compilation mode scrolls as it appears
-    grep-scroll-output t)                    ;; Output in grep mode scrolls as it appears
+              make-backup-files nil                 ;; To stop creating back-ups files
+              tab-width 4                           ;; To make tab width as 4 spaces
+              indent-tabs-mode nil                  ;; For using spaces instead of tabs
+              compilation-scroll-output t           ;; Output in compilation mode scrolls as it appears
+              grep-scroll-output t)                 ;; Output in grep mode scrolls as it appears
 
 ;; To set set split threshold for horizontal split
 (setq window-combination-resize t
@@ -57,7 +57,7 @@
 
 ;; Set custom font
 (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-17")) ; For compatibility with emacsclient
-; (set-frame-font "Iosevka Nerd Font 18" nil t)
+;; (set-frame-font "Iosevka Nerd Font 18" nil t)
 
 ;; See number of count when searching
 (setq isearch-lazy-count t)
@@ -119,9 +119,8 @@
   (set-face-foreground 'git-gutter-fr:deleted  "darkred"))
 
 ;; To set indetation as 4 spaces for C (Is it really needed?)
-(setq-default
-    ;; c-default-style "linux" ;; It prefers tabs over spaces
-    c-basic-offset 4)
+(setq-default c-basic-offset 4)
+;; c-default-style "linux" ;; It prefers tabs over spaces
 
 ;; Use `//' comments instead if `/*' comments in c-mode
 (add-hook 'c-mode-hook (lambda () (c-toggle-comment-style -1)))
