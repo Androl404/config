@@ -6,22 +6,7 @@
  '(LaTeX-indent-level 4)
  '(auth-source-save-behavior nil)
  '(column-number-mode t)
- '(custom-enabled-themes '(gruber-darker))
- '(custom-safe-themes
-   '("7fd8b914e340283c189980cd1883dbdef67080ad1a3a9cc3df864ca53bdc89cf"
-     "bbb13492a15c3258f29c21d251da1e62f1abb8bbd492386a673dcfab474186af"
-     "53a4efdca4c9fb870c3f92e4cfca0fbb638bb29b168a26a363298f9b1d9b9bcf"
-     "01a9797244146bbae39b18ef37e6f2ca5bebded90d9fe3a2f342a9e863aaa4fd"
-     default))
  '(doc-view-continuous t)
- '(ido-auto-merge-delay-time 0.7)
- '(ido-auto-merge-work-directories-length -1)
- '(ido-cr+-replace-completely t)
- '(ido-enable-dot-prefix t)
- '(ido-enable-flex-matching t)
- '(ido-everywhere nil)
- '(ido-mode 'both nil (ido))
- '(ido-show-dot-for-dired nil)
  '(markdown-command "/usr/bin/pandoc")
  '(package-selected-packages
    '(auctex-latexmk auto-complete-auctex catppuccin-theme company-auctex

@@ -1,8 +1,6 @@
 ;; To install some packages from Melpa
-(rc/require
- 'org-bullets
- 'htmlize
- )
+(use-package org-bullets :ensure t)
+(use-package htmlize :ensure t)
 
 ;; To use special bullets for lists
 (add-hook 'org-mode-hook 'org-bullets-mode)

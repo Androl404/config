@@ -5,6 +5,13 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
+(use-package gruber-darker-theme
+  :ensure t
+  :init
+  (setq custom-safe-themes t)
+  :config
+  (load-theme 'gruber-darker))
+
 ;; Set custom file for Emacs auto configuration
 (setq custom-file "~/.emacs.d/custom.el")
 
@@ -13,7 +20,6 @@
 
 ;; Load multiple functions
 (load "~/.emacs.d/rc.el")
-(rc/require 'gruber-darker-theme)
 
 (setq-default inhibit-splash-screen t               ;; Don't show the splash screen
     make-backup-files nil                           ;; To stop creating back-ups files
@@ -41,10 +47,7 @@
 
 ;; To disable the bell
 ;; (setq visible-bell t) ;; Switch to a visual bell
-(setq ring-bell-function 'ignore) ;; Disable the belle without graphical replacement
-
-;; Use short answer yes when quickly reverting a buffer (C-x x g)
-;; (setq revert-buffer-quick-short-answers t)
+(setq ring-bell-function 'ignore) ;; Disable the bell without graphical replacement
 
 ;; Display line numbers in every buffer
 (global-display-line-numbers-mode 1)
@@ -56,18 +59,64 @@
 (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-17")) ; For compatibility with emacsclient
 ; (set-frame-font "Iosevka Nerd Font 18" nil t)
 
-;; To set up the 'ido-completing-read+ package
-(rc/require 'smex 'ido-completing-read+)
-(require 'ido-completing-read+)
-(ido-ubiquitous-mode 1)
-(setq ido-use-filename-at-point 'guess)
+;; See number of count when searching
+(setq isearch-lazy-count t)
 
-;; To set up smex, in order to have a custom M-x menu, which the most use commands first
-(require 'smex)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "<menu>") 'smex)
-(global-set-key (kbd "<apps>") 'smex)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+;; Minibuffer packages
+(use-package vertico
+  :ensure t
+  :config
+  (setq vertico-cycle t)
+  (setq vertico-resize nil)
+  (vertico-mode 1))
+
+(use-package marginalia
+  :ensure t
+  :config
+  (marginalia-mode 1))
+
+(use-package consult
+  :ensure t
+  :config
+  (setq consult--read-config
+        '((consult-buffer :sort t)))
+  :bind (;; Search the current buffer
+         ("C-x b" . consult-buffer)
+         ("C-x C-b" . consult-buffer)))
+
+(use-package orderless
+  :ensure t
+  :config
+  (setq completion-styles '(orderless basic)))
+
+;; Save minibuffer history (works with Vertico, Consult, etc.)
+(use-package savehist
+  :ensure t
+  :init
+  (savehist-mode 1)
+  :config
+  (setq savehist-additional-variables
+        '(command-history
+          kill-ring
+          register-alist
+          mark-ring
+          global-mark-ring
+          search-ring
+          regexp-search-ring)))
+
+;; For the Git gutter
+(use-package git-gutter-fringe
+  :ensure t
+  :config
+  ;; optionally tweak the bitmaps to improve appearance
+  (global-git-gutter-mode 1)
+  (setq git-gutter:update-interval 0.02)
+  (define-fringe-bitmap 'git-gutter-fr:added   [224] nil nil '(center repeated))
+  (define-fringe-bitmap 'git-gutter-fr:modified [224] nil nil '(center repeated))
+  (define-fringe-bitmap 'git-gutter-fr:deleted [128 192 224 240] nil nil 'bottom)
+  (set-face-foreground 'git-gutter-fr:modified "darkorange")
+  (set-face-foreground 'git-gutter-fr:added    "darkgreen")
+  (set-face-foreground 'git-gutter-fr:deleted  "darkred"))
 
 ;; To set indetation as 4 spaces for C (Is it really needed?)
 (setq-default
@@ -98,103 +147,113 @@
 (setq dired-dwim-target t)
 
 ;; To enable the Typescript mode
-(rc/require 'typescript-mode)
-(require 'typescript-mode)
-(add-to-list 'auto-mode-alist '("\\.mts\\'" . typescript-mode))
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(use-package typescript-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.mts\\'" . typescript-mode))
+  (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode)))
 
 ;; Use electric pair mode, to type the closing parenthesis (and others) when you type the first one
 (electric-pair-mode t)
 
 ;; Multiple cursors mode
-(rc/require 'multiple-cursors)
-;; Do What I Mean
-(global-set-key (kbd "C-M-j") 'mc/mark-all-dwim) ; both marked and unmarked region. multiple presses.
-;; For continuous lines: Mark lines, then create cursors. Can be mid-line.
-(global-set-key (kbd "C-M-c") 'mc/edit-lines)
-;; Select region first, then create cursors.
-(global-set-key (kbd "C-M-/") 'mc/mark-all-like-this) ; select text first. finds all occurrences.
-(global-set-key (kbd "C-M-,") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-M-.") 'mc/mark-next-like-this)
-;; Skip this match and move to next one.
-(global-set-key (kbd "C-M-<") 'mc/skip-to-previous-like-this)
-(global-set-key (kbd "C-M->") 'mc/skip-to-next-like-this)
+(use-package multiple-cursors
+  :ensure t
+  :bind
+  ;; Do What I Mean
+  ("C-M-j" . mc/mark-all-dwim) ; both marked and unmarked region. multiple presses.
+  ;; For continuous lines: Mark lines, then create cursors. Can be mid-line.
+  ("C-M-c" . mc/edit-lines)
+  ;; Select region first, then create cursors.
+  ("C-M-/" . mc/mark-all-like-this) ; select text first. finds all occurrences.
+  ("C-M-," . mc/mark-previous-like-this)
+  ("C-M-." . mc/mark-next-like-this)
+  ;; Skip this match and move to next one.
+  ("C-M-<" . mc/skip-to-previous-like-this)
+  ("C-M->" . mc/skip-to-next-like-this))
 
 ;; Key-binding to duplicate line
 (global-set-key (kbd "C-M-,") 'duplicate-line)
 
 ;; To customize the edition on LaTeX documents
-(rc/require 'auctex)
-(setq TeX-auto-save t)
-(setq TeX-parse-self t)
-(setq LaTeX-electric-left-right-brace t)
-(setq-default TeX-master nil)
-
-(add-hook 'LaTeX-mode-hook 'flyspell-mode)
-(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-(add-hook 'LaTeX-mode-hook 'visual-line-mode)
-
-(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-(setq reftex-plug-into-AUCTeX t)
+(use-package auctex
+  :ensure t
+  :config
+  (setq TeX-auto-save t)
+  (setq TeX-parse-self t)
+  (setq LaTeX-electric-left-right-brace t)
+  (setq-default TeX-master nil)
+  (setq reftex-plug-into-AUCTeX t)
+  :hook ((LaTeX-mode . flyspell-mode)
+         (LaTeX-mode . LaTeX-math-mode)
+         (LaTeX-mode . visual-line-mode)
+         (LaTeX-mode . turn-on-reftex)))
+;; (use-package auto-complete-auctex :ensure t)
+(use-package auctex-latexmk :ensure t)
 
 ;; To customize Markdown document
-(add-hook 'markdown-mode-hook 'flyspell-mode)
-(add-hook 'markdown-mode-hook 'visual-line-mode)
+(use-package markdown-mode
+  :ensure t
+  :hook ((markdown-mode . flyspell-mode)
+         (markdown-mode . visual-line-mode)))
 
 ;; For the company mode
-(rc/require 'company-math 'company-box)
-(require 'company)
-(global-company-mode)
-(setq company-idle-delay 0.0)
+(use-package company-math :ensure t)
+(use-package company-box :ensure t)
+(use-package company-auctex :ensure t)
+(use-package company
+  :ensure t
+  :config
+  (global-company-mode)
+  (setq company-idle-delay 0.0))
 
 ;; To move Text
-(rc/require 'move-text)
-(global-set-key (kbd "M-p") 'move-text-up)
-(global-set-key (kbd "M-n") 'move-text-down)
+(use-package move-text
+  :ensure t
+  :bind
+  ("M-p" . move-text-up)
+  ("M-n" . move-text-down))
 
-;; Replace useless list directory binding
-(global-set-key (kbd "C-x C-d") 'ido-dired)
+;; For TypeScript
+(use-package typst-ts-mode
+  :ensure t
+  :config
+  ;; (add-to-list 'treesit-language-source-alist
+  ;;              '(typst "https://github.com/uben0/tree-sitter-typst"))
+  ;; (treesit-install-language-grammar 'typst)
+  :hook ((typst-ts-mode . flyspell-mode)
+         (typst-ts-mode . visual-line-mode)))
 
-;; Replace useless buffer list binding
-(global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
+;; For the cursor to shine when to move it
+(use-package beacon
+  :ensure t
+  :config
+  (beacon-mode))
 
-;; To find things to do and to fix
-;; (rc/require 'fixmee)
-;; (require 'fixmee)
-;; (require 'button-lock)
-;; (global-fixmee-mode 1)
+;; To save where I was in files
+(save-place-mode t)
 
-;; For typst mode with tree-sitter
-(rc/require 'typst-ts-mode)
-;; (add-to-list 'treesit-language-source-alist
-;;              '(typst "https://github.com/uben0/tree-sitter-typst"))
-;; (treesit-install-language-grammar 'typst)
-(add-hook 'typst-ts-mode-hook 'flyspell-mode)
-(add-hook 'typst-ts-mode-hook 'visual-line-mode)
+;; Major modes
+(use-package php-mode :ensure t)
+(use-package web-mode :ensure t)
+(use-package matlab-mode :ensure t)
+(use-package rust-mode :ensure t)
+(use-package lsp-mode :ensure t)
+(use-package lua-mode :ensure t)
 
-
-(rc/require
-    'php-mode
-    'typescript-mode
-    'markdown-mode
-    'magit
-    'rust-mode
-    'auto-complete-auctex
-    'flycheck
-    'eglot
-    'lsp-mode
-    'lua-mode
-    'company-auctex
-    'auctex-latexmk
-    'evil
-    'editorconfig
-    'jsonrpc
-    'matlab-mode
-    'exec-path-from-shell
-)
+;; Other packages
+(use-package magit :ensure t)
+(use-package flycheck :ensure t)
+(use-package eglot :ensure t) ; Build in since 30.1
+(use-package editorconfig :ensure t)
+(use-package jsonrpc :ensure t)
 
 ;; To use the PATH from shell (use the .bashrc file)
-(exec-path-from-shell-initialize)
+(use-package exec-path-from-shell
+  :ensure t
+  :config
+  (when (eq system-type 'gnu/linux)
+    (exec-path-from-shell-initialize)))
 
 ;; To load the org configuration
 (load "~/.emacs.d/org.el")

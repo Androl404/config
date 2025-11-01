@@ -1,28 +1,3 @@
-;; Credit to Mr A-Who, Mr Zozin : `https://github.com/rexim/dotfiles'
-(defvar rc/package-contents-refreshed nil)
-
-(defun rc/package-refresh-contents-once ()
-  (when (not rc/package-contents-refreshed)
-    (setq rc/package-contents-refreshed t)
-    (package-refresh-contents)))
-
-(defun rc/require-one-package (package)
-  (when (not (package-installed-p package))
-    (rc/package-refresh-contents-once)
-    (package-install package)))
-
-(defun rc/require (&rest packages)
-  (dolist (package packages)
-    (rc/require-one-package package)))
-
-(defun rc/require-theme (theme)
-  (let ((theme-package (->> theme
-                            (symbol-name)
-                            (funcall (-flip #'concat) "-theme")
-                            (intern))))
-    (rc/require theme-package)
-    (load-theme theme t)))
-
 ;; Splits between horizontally and vertically splited windows
 (defun rc/toggle-window-split ()
   (interactive)
@@ -146,3 +121,14 @@ If no more s-expressions can be marked, keep the current region and show a messa
   (kill-new (buffer-file-name)))
 
 (global-set-key [C-f1] 'rc/show-file-name)
+
+;; To switch between frames when all frames have only one window
+(defun rc/other-window-or-frame ()
+  "Switch to next frame if all frames have only one window; otherwise switch window."
+  (interactive)
+  (if (cl-every (lambda (f) (= (length (window-list f)) 1))
+                (frame-list))
+      (other-frame 1)
+    (other-window 1)))
+
+(global-set-key (kbd "C-x o") #'rc/other-window-or-frame)
