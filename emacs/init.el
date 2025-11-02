@@ -69,7 +69,7 @@
 ;; Minibuffer packages
 (use-package vertico
   :ensure t
-  :config
+  :init
   (setq vertico-cycle t)
   (setq vertico-resize nil)
   (vertico-mode 1)
@@ -87,7 +87,7 @@
 
 (use-package marginalia
   :ensure t
-  :config
+  :init
   (marginalia-mode 1))
 
 (use-package consult
@@ -242,7 +242,7 @@
 (use-package beacon
   :ensure t
   :config
-  (beacon-mode))
+  (beacon-mode 1))
 
 ;; To save where I was in files
 (save-place-mode t)
