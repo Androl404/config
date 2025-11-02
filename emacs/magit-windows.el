@@ -1,3 +1,5 @@
+(setq magit-refresh-status-buffer nil)
+(setq magit-refresh-buffer-hook nil)
 (setq magit-refresh-verbose 'true)
 
 ;; WORKAROUND https://github.com/magit/magit/issues/2395
