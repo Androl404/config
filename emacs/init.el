@@ -60,8 +60,8 @@
 (setq display-line-numbers-type 'relative)
 
 ;; Set custom font
-(add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-17")) ; For compatibility with emacsclient
-;; (set-frame-font "Iosevka Nerd Font 18" nil t)
+(add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-16")) ; For compatibility with emacsclient
+;; (set-frame-font "Iosevka Nerd Font 16" nil t)
 
 ;; See number of count when searching
 (setq isearch-lazy-count t)
