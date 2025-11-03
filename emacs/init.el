@@ -256,6 +256,7 @@
 (use-package yaml-mode :ensure t)
 (use-package csv-mode :ensure t)
 (use-package lsp-mode :ensure t)
+(use-package cmake-mode :ensure t)
 
 ;; Other packages
 (use-package magit :ensure t)
