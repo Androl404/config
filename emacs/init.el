@@ -244,6 +244,18 @@
   :config
   (beacon-mode 1))
 
+;; Do not make the cursor blink when
+(with-eval-after-load 'company
+  (defun my/beacon-disable-during-company (&rest _)
+    (setq-local beacon-lighter nil
+                beacon-mode nil))
+  (defun my/beacon-enable-after-company (&rest _)
+    (setq-local beacon-mode t))
+
+  (advice-add 'company-post-command :before #'my/beacon-disable-during-company)
+  (advice-add 'company-cancel :after #'my/beacon-enable-after-company)
+  (advice-add 'company-complete-selection :after #'my/beacon-enable-after-company))
+  
 ;; To save where I was in files
 (save-place-mode t)
 
@@ -264,6 +276,38 @@
 (use-package eglot :ensure t) ; Build in since 30.1
 (use-package editorconfig :ensure t)
 (use-package jsonrpc :ensure t)
+
+;; DAP mode, for debugging
+(use-package dap-mode
+  :ensure t
+  :config
+  (dap-mode 1)
+  (dap-ui-mode 1)
+  (dap-tooltip-mode 1)
+  (tooltip-mode 1)
+  (dap-ui-controls-mode 1)
+  (require 'dap-python) ; For Python
+  (setq dap-python-debugger 'debugpy)
+  (require 'dap-gdb)) ; For C and C++
+
+;; Set UI for dap
+(with-eval-after-load 'dap-ui
+  (setq dap-ui-buffer-configurations
+        `((,dap-ui--locals-buffer       . ((side . right)  (slot . 1) (window-width . 0.25)))
+          (,dap-ui--expressions-buffer  . ((side . right)  (slot . 2) (window-width . 0.25)))
+          (,dap-ui--sessions-buffer     . ((side . left)   (slot . 1) (window-width . 0.20)))
+          (,dap-ui--breakpoints-buffer  . ((side . left)   (slot . 2) (window-width . 0.20)))
+          (,dap-ui--debug-window-buffer . ((side . bottom) (slot . 3) (window-height . 0.20)))
+          (,dap-ui--repl-buffer         . ((side . bottom) (slot . 1) (window-height . 0.45))))))
+
+;; For LSP mode, using pyright for Python
+(use-package lsp-pyright
+  :ensure t
+  :custom (lsp-pyright-langserver-command "pyright") ;; or basedpyright
+  ;; :hook (python-mode . (lambda ()
+  ;;                        (require 'lsp-pyright)
+  ;;                        (lsp)))
+  )  ; or lsp-deferred
 
 ;; To use the PATH from shell (use the .bashrc file)
 (use-package exec-path-from-shell
