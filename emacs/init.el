@@ -328,7 +328,7 @@
 
 ;; Set variable for my Windows environnement
 (when (eq system-type 'windows-nt)
-  (setq python-shell-interpeter "C:\\Users\\azeucianu\\AppData\\Local\\Programs\\Python\\Launcher\\py.exe")
+  (setq python-shell-interpreter "C:\\Users\\azeucianu\\AppData\\Local\\Programs\\Python\\Launcher\\py.exe")
   (setq ispell-dictionary "français")
   (setq delete-by-moving-to-trash t)
   (setq ispell-program-name "C:\\Program Files\\hunspell\\bin\\hunspell.exe")
