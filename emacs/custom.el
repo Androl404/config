@@ -8,7 +8,16 @@
  '(column-number-mode t)
  '(doc-view-continuous t)
  '(markdown-command "/usr/bin/pandoc")
- '(package-selected-packages nil)
+ '(package-selected-packages
+   '(auctex-latexmk beacon cmake-mode company-auctex company-box
+                    company-math consult csv-mode dap-mode
+                    eglot-ltex-plus exec-path-from-shell flycheck
+                    git-gutter-fringe gruber-darker-theme htmlize
+                    lsp-ltex-plus lsp-mode lsp-pyright lua-mode magit
+                    marginalia matlab-mode move-text multiple-cursors
+                    orderless org-bullets php-mode rust-mode
+                    typescript-mode typst-ts-mode vertico web-mode
+                    yaml-mode))
  '(php-imenu-generic-expression 'php-imenu-generic-expression-simple)
  '(php-mode-coding-style 'psr2)
  '(php-mode-template-compatibility nil)
