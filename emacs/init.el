@@ -259,6 +259,10 @@
 ;; To save where I was in files
 (save-place-mode t)
 
+;; Color output in compilation mode, with CMake for instance
+(use-package ansi-color
+  :hook (compilation-filter . ansi-color-compilation-filter))
+
 ;; Major modes
 (use-package php-mode :ensure t)
 (use-package web-mode :ensure t)
