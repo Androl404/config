@@ -76,7 +76,7 @@
   :bind (:map vertico-map
               ("RET" . vertico-directory-enter)   ;; enter directories naturally
               ("DEL" . vertico-directory-delete-char) ;; deletes directory components like ido
-              ("C-j" . vertico-directory-enter)
+              ("C-j" . rc/vertico-accept-input)
               ("C-l" . vertico-directory-up)))
 
 (use-package vertico-directory

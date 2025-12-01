@@ -132,3 +132,12 @@ If no more s-expressions can be marked, keep the current region and show a messa
     (other-window 1)))
 
 (global-set-key (kbd "C-x o") #'rc/other-window-or-frame)
+
+;; Execute exactly what I type when pressing C-j
+(defun rc/vertico-accept-input ()
+  "Accept minibuffer input exactly as typed, ignoring the current candidate."
+  (interactive)
+  (let ((input (minibuffer-contents)))
+    (delete-minibuffer-contents)
+    (insert input)
+    (exit-minibuffer)))
