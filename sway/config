@@ -195,7 +195,7 @@ input "type:keyboard" {
     # We just use 1-10 as the default.
 
 # Bind Alt+Tab to switch between workspaces
-bindsym Mod1+Tab workspace next
+bindsym Mod1+Tab workspace back_and_forth
 bindsym Mod1+Shift+Tab workspace prev
 
 # Layout stuff:
