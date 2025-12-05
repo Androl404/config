@@ -159,6 +159,8 @@
 (setq dired-listing-switches "-alh --group-directories-first")
 ;; For dired if I have multiple dired windows to move/copy file with default path of the other buffer
 (setq dired-dwim-target t)
+;; Allow to modify the permissions directly in the EditableDired buffer
+(setq wdired-allow-to-change-permissions t)
 
 ;; To enable the Typescript mode
 (use-package typescript-mode
