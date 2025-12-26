@@ -19,9 +19,9 @@ set $right m
 # Your preferred terminal emulator
 # set $term foot
 set $term alacritty
-# Your preferred application launcher
-set $menu rofi -show run # wmenu-run
-set $dmenu rofi -show drun #wmenu-run
+# Your preferred application launcher (we use a bash trick to have an up-to-date PATH)
+set $menu bash -l -c "rofi -show run" # wmenu-run
+set $dmenu bash -l -c "rofi -show drun" #wmenu-run
 
 include /etc/sway/config-vars.d/*
 
