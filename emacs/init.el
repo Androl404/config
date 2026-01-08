@@ -240,6 +240,16 @@
   :hook ((typst-ts-mode . flyspell-mode)
          (typst-ts-mode . visual-line-mode)))
 
+;; For Typst LSP
+(setq typst-ts-lsp-download-path "~/opt/tinymist-x86_64-unknown-linux-gnu/tinymist") ;; Change this path to your typst-lsp path
+(with-eval-after-load 'eglot
+  (with-eval-after-load 'typst-ts-mode
+    (add-to-list 'eglot-server-programs
+                 `((typst-ts-mode) .
+                   ,(eglot-alternatives `(,typst-ts-lsp-download-path
+                                          "tinymist"
+                                          "typst-lsp"))))))
+
 ;; For the cursor to shine when to move it
 (use-package beacon
   :ensure t
