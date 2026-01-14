@@ -7,6 +7,10 @@
  '(auth-source-save-behavior nil)
  '(column-number-mode t)
  '(doc-view-continuous t)
+ '(elfeed-feeds
+   '("https://www.smart-energy.com/industry-sectors/smart-grid/feed/"
+     "https://www.powermag.com/category/smart-grid/feed/"
+     "https://www.newscientist.com/feed/home/?cmpid=RSS%7CNSNS-Home"))
  '(markdown-command "/usr/bin/pandoc")
  '(package-selected-packages
    '(auctex-latexmk beacon cmake-mode company-auctex company-box
