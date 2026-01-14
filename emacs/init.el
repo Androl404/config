@@ -325,6 +325,16 @@
   ;;                        (lsp)))
   )  ; or lsp-deferred
 
+;; Configure Elfeed
+(use-package elfeed
+  :ensure t
+  :custom
+  (elfeed-db-directory
+   (expand-file-name "elfeed" user-emacs-directory))
+  (elfeed-show-entry-switch 'display-buffer)
+  :bind
+  ("C-c w e" . elfeed))
+
 ;; To use the PATH from shell (use the .bashrc file)
 (use-package exec-path-from-shell
   :ensure t
