@@ -78,7 +78,7 @@ bindsym $mod+t output eDP-1 toggle
 #
 exec swayidle -w \
          timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         timeout 303 'swaylock -f -e -F -k -l --indicator-radius 100 -c 181818' \
+         timeout 304 'swaylock -f -e -F -k -l --indicator-radius 100 -c 181818' \
          before-sleep 'swaylock -f -e -F -k -l --indicator-radius 100 -c 181818'
 
 for_window [class=".*"] inhibit_idle fullscreen
