@@ -13,14 +13,15 @@
      "https://www.newscientist.com/feed/home/?cmpid=RSS%7CNSNS-Home"))
  '(markdown-command "/usr/bin/pandoc")
  '(package-selected-packages
-   '(auctex-latexmk beacon cmake-mode company-auctex company-box
-                    company-math consult csv-mode dap-mode elfeed
-                    exec-path-from-shell flycheck git-gutter-fringe
-                    gruber-darker-theme htmlize lsp-pyright lua-mode
-                    magit marginalia matlab-mode move-text
-                    multiple-cursors orderless org-bullets php-mode
-                    rust-mode typescript-mode typst-ts-mode vertico
-                    web-mode yaml-mode))
+   '(auctex-latexmk beacon bitbake-ts-mode cmake-mode company-auctex
+                    company-box company-math consult csv-mode dap-mode
+                    elfeed exec-path-from-shell flycheck
+                    git-gutter-fringe gruber-darker-theme htmlize
+                    koopa-mode lsp-pyright lua-mode magit marginalia
+                    matlab-mode move-text multiple-cursors orderless
+                    org-bullets php-mode powershell rust-mode
+                    typescript-mode typst-ts-mode vertico web-mode
+                    yaml-mode))
  '(php-imenu-generic-expression 'php-imenu-generic-expression-simple)
  '(php-mode-coding-style 'psr2)
  '(php-mode-template-compatibility nil)
