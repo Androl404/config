@@ -230,7 +230,7 @@
   ("M-p" . move-text-up)
   ("M-n" . move-text-down))
 
-;; For TypeScript
+;; For Typst (document system)
 (use-package typst-ts-mode
   :ensure t
   :config
