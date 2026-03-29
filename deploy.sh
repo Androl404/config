@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 set -e
 
-SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
-ACTION="$1"       # install | uninstall
-shift             # Remaining arguments are program names (optional)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ACTION="$1" # install | uninstall
+shift       # Remaining arguments are program names (optional)
 
 # --- Helper functions --------------------------------------------------------
 
@@ -32,6 +32,7 @@ tmux     tmux/.tmux.conf                  ~/.tmux.conf
 nvim     neovim/init.lua                  ~/.config/nvim/init.lua
 alacritty alacritty/alacritty.toml        ~/.config/alacritty/alacritty.toml
 kitty    kitty/kitty.conf                 ~/.config/kitty/kitty.conf
+kitty    kitty/current-theme.conf         ~/.config/kitty/current-theme.conf
 i3       i3wm/config                      ~/.config/i3/config
 i3       i3wm/.i3status.conf              ~/.i3status.conf
 hypr     hyprland/hyprland.conf           ~/.config/hyprland/hyprland.conf
@@ -70,8 +71,8 @@ install_or_remove() {
 
         if [ "$program" = "all" ] || [ "$program" = "$prog" ]; then
             case $action in
-                install) install_link "$src" "$dest" ;;
-                uninstall) remove_link "$src" "$dest" ;;
+            install) install_link "$src" "$dest" ;;
+            uninstall) remove_link "$src" "$dest" ;;
             esac
         fi
     done
