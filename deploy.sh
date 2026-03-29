@@ -27,30 +27,30 @@ remove_link() {
 # PROGRAM | source relative to repo | target absolute path
 
 CONFIG="
-vim      vim/.gvimrc                      ~/.gvimrc
-tmux     tmux/.tmux.conf                  ~/.tmux.conf
-nvim     neovim/init.lua                  ~/.config/nvim/init.lua
-alacritty alacritty/alacritty.toml        ~/.config/alacritty/alacritty.toml
-kitty    kitty/kitty.conf                 ~/.config/kitty/kitty.conf
-kitty    kitty/current-theme.conf         ~/.config/kitty/current-theme.conf
-i3       i3wm/config                      ~/.config/i3/config
-i3       i3wm/.i3status.conf              ~/.i3status.conf
-hypr     hyprland/hyprland.conf           ~/.config/hyprland/hyprland.conf
-sway     sway/config                       ~/.config/sway/config
-waybar   waybar/config                     ~/.config/waybar/config
-waybar   waybar/style.css                  ~/.config/waybar/style.css
-rofi     rofi/config.rasi                  ~/.config/rofi/config.rasi
-rofi     rofi/leave.sh                     ~/.config/rofi/leave.sh
-rofi     rofi/themes/dtos-center-new.rasi  ~/.config/rofi/themes/dtos-center-new.rasi
-rofi     rofi/themes/dtos-center.rasi      ~/.config/rofi/themes/dtos-center.rasi
-rofi     rofi/themes/dtos-dmenu.rasi       ~/.config/rofi/themes/dtos-dmenu.rasi
-emacs    emacs/init.el                     ~/.emacs.d/init.el
-emacs    emacs/rc.el                       ~/.emacs.d/rc.el
-emacs    emacs/custom.el                   ~/.emacs.d/custom.el
-emacs    emacs/org.el                      ~/.emacs.d/org.el
-emacs    emacs/magit-windows.el            ~/.emacs.d/magit-windows.el
-emacs    emacs/w32-browser.el              ~/.emacs.d/w32-browser.el
-emacs    emacs/org-style.css               ~/.emacs.d/org-style.css
+vim      vim/.gvimrc                      $HOME/.gvimrc
+tmux     tmux/.tmux.conf                  $HOME/.tmux.conf
+nvim     neovim/init.lua                  $HOME/.config/nvim/init.lua
+alacritty alacritty/alacritty.toml        $HOME/.config/alacritty/alacritty.toml
+kitty    kitty/kitty.conf                 $HOME/.config/kitty/kitty.conf
+kitty    kitty/current-theme.conf         $HOME/.config/kitty/current-theme.conf
+i3       i3wm/config                      $HOME/.config/i3/config
+i3       i3wm/.i3status.conf              $HOME/.i3status.conf
+hypr     hyprland/hyprland.conf           $HOME/.config/hyprland/hyprland.conf
+sway     sway/config                       $HOME/.config/sway/config
+waybar   waybar/config                     $HOME/.config/waybar/config
+waybar   waybar/style.css                  $HOME/.config/waybar/style.css
+rofi     rofi/config.rasi                  $HOME/.config/rofi/config.rasi
+rofi     rofi/leave.sh                     $HOME/.config/rofi/leave.sh
+rofi     rofi/themes/dtos-center-new.rasi  $HOME/.config/rofi/themes/dtos-center-new.rasi
+rofi     rofi/themes/dtos-center.rasi      $HOME/.config/rofi/themes/dtos-center.rasi
+rofi     rofi/themes/dtos-dmenu.rasi       $HOME/.config/rofi/themes/dtos-dmenu.rasi
+emacs    emacs/init.el                     $HOME/.emacs.d/init.el
+emacs    emacs/rc.el                       $HOME/.emacs.d/rc.el
+emacs    emacs/custom.el                   $HOME/.emacs.d/custom.el
+emacs    emacs/org.el                      $HOME/.emacs.d/org.el
+emacs    emacs/magit-windows.el            $HOME/.emacs.d/magit-windows.el
+emacs    emacs/w32-browser.el              $HOME/.emacs.d/w32-browser.el
+emacs    emacs/org-style.css               $HOME/.emacs.d/org-style.css
 "
 
 # --- Program selection --------------------------------------------------------
