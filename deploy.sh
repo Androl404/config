@@ -53,6 +53,7 @@ i3        i3wm/config                      $HOME/.config/i3/config
 i3        i3wm/.i3status.conf              $HOME/.i3status.conf
 hypr      hyprland/hyprland.conf           $HOME/.config/hyprland/hyprland.conf
 sway      sway/config                      $HOME/.config/sway/config
+niri      niri/config.kdl                  $HOME/.config/niri/config.kdl
 waybar    waybar/config                    $HOME/.config/waybar/config
 waybar    waybar/style.css                 $HOME/.config/waybar/style.css
 rofi      rofi/config.rasi                 $HOME/.config/rofi/config.rasi
