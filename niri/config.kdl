@@ -532,18 +532,18 @@ binds {
     Mod+agrave { focus-workspace 10; }
     Mod+parenright { focus-workspace 11; }
     Mod+equal { focus-workspace 12; }
-    Mod+Ctrl+ampersand { move-column-to-workspace 1; }
-    Mod+Ctrl+eacute { move-column-to-workspace 2; }
-    Mod+Ctrl+quotedbl { move-column-to-workspace 3; }
-    Mod+Ctrl+apostrophe { move-column-to-workspace 4; }
-    Mod+Ctrl+parenleft { move-column-to-workspace 5; }
-    Mod+Ctrl+minus { move-column-to-workspace 6; }
-    Mod+Ctrl+egrave { move-column-to-workspace 7; }
-    Mod+Ctrl+underscore { move-column-to-workspace 8; }
-    Mod+Ctrl+ccedilla { move-column-to-workspace 9; }
-    Mod+Ctrl+agrave { move-column-to-workspace 10; }
-    Mod+Ctrl+parenright { move-column-to-workspace 11; }
-    Mod+Ctrl+equal { move-column-to-workspace 12; }
+    Mod+Shift+ampersand { move-column-to-workspace 1; }
+    Mod+Shift+eacute { move-column-to-workspace 2; }
+    Mod+Shift+quotedbl { move-column-to-workspace 3; }
+    Mod+Shift+apostrophe { move-column-to-workspace 4; }
+    Mod+Shift+parenleft { move-column-to-workspace 5; }
+    Mod+Shift+minus { move-column-to-workspace 6; }
+    Mod+Shift+egrave { move-column-to-workspace 7; }
+    Mod+Shift+underscore { move-column-to-workspace 8; }
+    Mod+Shift+ccedilla { move-column-to-workspace 9; }
+    Mod+Shift+agrave { move-column-to-workspace 10; }
+    Mod+Shift+parenright { move-column-to-workspace 11; }
+    Mod+Shift+equal { move-column-to-workspace 12; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
