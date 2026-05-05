@@ -311,6 +311,9 @@ focus_follows_mouse no
 # Hide the edges borders of the windows
 hide_edge_borders both
 
+# Hide the title bar for new windows
+# default_border none
+
 #
 # Status Bar:
 #
