@@ -326,6 +326,10 @@ window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id=r#"waterfox"# title="^Picture-in-Picture$"
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
+
+    // Gnome calculator
+    match app-id=r#"org.gnome.Calculator"#
+
     open-floating true
 }
 
@@ -652,4 +656,3 @@ spawn-at-startup "wl-paste" "--watch" "cliphist" "store" // Start noctalia-shell
 prefer-no-csd // Disable client side bar
 
 include "./noctalia.kdl"
-
