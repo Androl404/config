@@ -68,6 +68,10 @@ emacs     emacs/org.el                     $HOME/.emacs.d/org.el
 emacs     emacs/magit-windows.el           $HOME/.emacs.d/magit-windows.el
 emacs     emacs/w32-browser.el             $HOME/.emacs.d/w32-browser.el
 emacs     emacs/org-style.css              $HOME/.emacs.d/org-style.css
+fish      fish/config.fish                 $HOME/.config/fish/config.fish
+fish      fish/fish_variables              $HOME/.config/fish/fish_variables
+fish      fish/functions/ll.fish           $HOME/.config/fish/functions/ll.fish
+fish      fish/functions/fish_prompt.fish  $HOME/.config/fish/functions/fish_prompt.fish
 "
 
 # --- Program selection --------------------------------------------------------
