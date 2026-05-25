@@ -45,6 +45,8 @@ nvim      neovim/lua/plugins/example.lua   $HOME/.config/nvim/lua/plugins/exampl
 nvim      neovim/lua/plugins/kanagawa.lua  $HOME/.config/nvim/lua/plugins/kanagawa.lua
 nvim      neovim/lua/plugins/neogit.lua    $HOME/.config/nvim/lua/plugins/neogit.lua
 nvim      neovim/lua/plugins/vimtex.lua    $HOME/.config/nvim/lua/plugins/vimtex.lua
+nvim      neovim/lua/plugins/copilot.lua    $HOME/.config/nvim/lua/plugins/copilot.lua
+nvim      neovim/lua/plugins/transparent.lua    $HOME/.config/nvim/lua/plugins/transparent.lua
 nvim      neovim/stylua.toml               $HOME/.config/nvim/stylua.toml
 alacritty alacritty/alacritty.toml         $HOME/.config/alacritty/alacritty.toml
 kitty     kitty/kitty.conf                 $HOME/.config/kitty/kitty.conf
