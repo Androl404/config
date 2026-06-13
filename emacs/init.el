@@ -286,6 +286,7 @@
 (use-package lsp-mode :ensure t)
 (use-package cmake-mode :ensure t)
 (use-package powershell :ensure t)
+(use-package go-mode :ensure t)
 
 ;; Other packages
 (use-package magit :ensure t)
