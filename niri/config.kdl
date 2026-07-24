@@ -371,9 +371,9 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Shift+Return hotkey-overlay-title="Open an Emacs client: emacsclient" { spawn-sh "emacsclient -c -a 'emacs' " ; }
     Mod+S hotkey-overlay-title="Open a file manager: nautilus" { spawn "nautilus"; }
-    Mod+D hotkey-overlay-title="Run an Application: Noctalia Launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle" ; }
-    Alt+L hotkey-overlay-title="Lock the Screen: Noctalia Lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock" ; }
-    Alt+Shift+L hotkey-overlay-title="Lock and suspend: Noctalia Lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock && systemctl suspend" ; }
+    Mod+D hotkey-overlay-title="Run an Application: Noctalia Launcher" { spawn-sh "noctalia msg panel-toggle launcher" ; }
+    Alt+L hotkey-overlay-title="Lock the Screen: Noctalia Lock" { spawn-sh "noctalia msg session lock" ; }
+    Alt+Shift+L hotkey-overlay-title="Lock and suspend: Noctalia Lock" { spawn-sh "noctalia msg session lock-and-suspend" ; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -650,7 +650,7 @@ binds {
 }
 
 // Custom startup applications
-spawn-at-startup "qs" "-c" "noctalia-shell" // Start noctalia-shell
+spawn-at-startup "noctalia" // Start noctalia-shell
 spawn-at-startup "emacs" "--daemon" // Start noctalia-shell
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store" // Start noctalia-shell
 prefer-no-csd // Disable client side bar
