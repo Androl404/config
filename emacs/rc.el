@@ -115,10 +115,17 @@ If no more s-expressions can be marked, keep the current region and show a messa
 
 ;; To show and copy (kill) the absolute path of the current buffer.
 (defun rc/show-file-name ()
-  "Show the full path file name in the minibuffer."
+  "Show the full path of the current file or Dired directory.
+Copy the path to the kill ring and display it in the minibuffer."
   (interactive)
-  (message (buffer-file-name))
-  (kill-new (buffer-file-name)))
+  (let ((path (or (buffer-file-name)
+                  (and (derived-mode-p 'dired-mode)
+                       (dired-current-directory)))))
+    (if path
+        (progn
+          (message "%s" path)
+          (kill-new path))
+      (user-error "Current buffer has no file or directory path"))))
 
 (global-set-key [C-f1] 'rc/show-file-name)
 
