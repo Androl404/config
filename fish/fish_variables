@@ -40,4 +40,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/andrei/opt/zen\x1e/home/andrei/opt/waterfox\x1e/home/andrei/opt/node\x2dv25\x2e0\x2e0\x2dlinux\x2dx64/bin\x1e/home/andrei/opt/typst\x2dx86_64\x2dunknown\x2dlinux\x2dmusl/bin
+SETUVAR fish_user_paths:/home/andrei/opt/nodejs/bin\x1e/home/andrei/opt/zen\x1e/home/andrei/opt/waterfox\x1e/home/andrei/opt/typst\x2dx86_64\x2dunknown\x2dlinux\x2dmusl/bin
